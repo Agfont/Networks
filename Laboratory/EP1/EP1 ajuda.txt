@@ -1,0 +1,32 @@
+# Arthur Font Gouveia - 12036152
+
+EP1
+- testar com mosquitto client
+- entender o protocolo da camada de aplicação (write e read)
+
+- Comandos
+sudo lsof -i TCP:1883
+sudo kill PID
+
+- 3 terminais
+./mqtt-server 1883
+mosquitto_sub -t teste
+mosquitto_pub -t teste -m "Palmeiras"
+
+Outros comandos:
+sudo netstat -anp | less
+sudo lsof -n | less
+- Less: 
+Para buscar: /<palavra>
+while(1) read file
+
+sudo nethogs
+sudo nethogs -a
+top -i
+top -c -p $(pgrep -d',' -f mqtt-server)
+top -c -p $(pgrep -d',' -f mosquitto)
+ps -ppid $(pgrep -d',' -f mqtt) -o %cpu,%mem,cmd
+ps aux | grep mqtt
+grep -E 'pattern1|pattern2'
+
+tar -czvf ep1-arthur_font_gouveia.tar.gz ep1-mqtt-server.c ep1-arthur_font_gouveia/

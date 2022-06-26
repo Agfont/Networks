@@ -1,0 +1,9 @@
+A8 - DNS
+
+view /etc/resolv.conf
+ping www
+
+---------------------
+Cache Local ou servidor DNS (Query time)
+dig www.harvard.edu
+dig www.harvard.edu

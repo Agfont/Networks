@@ -1,0 +1,17 @@
+-- Server
+python3 main.py 8000
+
+-- Client
+python3 main.py 192.168.15.25 8000
+python3 main.py 192.168.0.103 8000
+
+ip -o -4 addr show | awk '{print $1" " $2": "$4}'
+ip -4 addr show | grep  wlp2s0 |awk '{print $1" " $2" " $9}
+ifconfig -a
+cat /sys/class/net/wlp2s0/operstate
+cat /etc/hosts
+
+-i time (1 default)
+-i 1
+ping -c 1 8.8.8.8
+error: ping: connect: Network is unreachable

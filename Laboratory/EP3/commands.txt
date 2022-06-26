@@ -1,0 +1,51 @@
+Another window SSH:
+sudo controller ptcp:6633
+
+Another window SSH:
+sudo mn --topo single,3 --mac --switch ovsk --controller remote
+
+import statistics as s
+s.pstdev([18.2, 19.4, 19.2, 19.2, 18.2])
+s.mean([391, 401, 404, 391, 336])
+
+
+Seção 5
+SSH:
+cd pox/
+./pox.py log.level --DEBUG misc.of_tutorial
+
+SSH: mininet
+sudo ovs-ofctl dump-flows s1
+scp rules.json  mininet@192.168.56.5:/home/mininet/pox
+
+iperf
+default (TCP e 5001)
+servidor: -s
+UDP: -u
+porta: -p 
+
+read failed: Connection refused
+Roteiro:
+1.
+	h1)
+	iperf -c 10.0.0.3 -u -p 5000
+	iperf -c 10.0.0.3
+	
+	h3) 
+	tcpdump -XX -n -i h3-eth0
+	tcpdump -XX -n -i h3-eth0
+
+	ssh)
+	sudo ovs-ofctl dump-flows s1 | grep drop
+2.
+
+	h1)
+	iperf -c 10.0.0.2
+	iperf -c 10.0.0.2 -u
+	
+	h2) 
+	tcpdump -XX -n -i h2-eth0
+	tcpdump -XX -n -i h2-eth0
+	ssh)
+	sudo ovs-ofctl dump-flows s1 | grep drop
+

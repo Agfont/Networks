@@ -1,0 +1,2 @@
+--- O Protocolo TLS se situa entre as camadas de Aplicação e Transporte. 
+--- Passo 1 Minuto 30 29/04

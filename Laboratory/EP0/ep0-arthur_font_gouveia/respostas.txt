@@ -1,0 +1,27 @@
+# Arthur Font Gouveia - 12036152
+
+1) O site responsável pelo primeiro segmento escolhido foi o Github. O segmento escolhido contém o protocolo TLS, o qual podemos considerar que pertence a camada de aplicação.
+
+IP fonte: 192.168.0.123
+MAC fonte : HonHaiPr_bc:b2:11 (08:ed:b9:bc:b2:11)
+IP destino: 151.101.178.109
+MAC destino : c4:e9:0a:b9:dc:f2
+
+
+O site responsável pelo segundo segmento escolhido foi o Gmail.
+IP fonte: 192.168.0.123
+MAC fonte : HonHaiPr_bc:b2:11 (08:ed:b9:bc:b2:11)
+IP destino: 64.233.186.189
+MAC destino : c4:e9:0a:b9:dc:f2
+
+Os sites foram descobertos utilizando o comando whois do shell e o navegador para procurar informações sobre o IP. No caso do Gmail, o comando whois informou que o IP pertencia ao Google. Já no caso do Github, o comando whois informou que o endereço IP pertencia a Fastly e verifiquei que o Github utiliza o provedor da Fastly.
+
+2) O tempo necessário paa fazer a transferência do arquivo foi 0.072247522 segundos. A transferência via HTTPS gerou uma sobrecarga de 96083,3%. O tamanho real do arquivo foi obtido através do comando "curl https://www.ime.usp.br/~batista/65535 --output data" e o número total de bytes transferidos entre o cliente e o servidor foi obtido através do menu "Statistics > Conversations > Bytes" do Wireshark.
+
+A conta que fiz para encontrar a sobrecarga gerada foi:
+   S = (T - R)/R * 100 = 96083,3%
+   
+Dados:
+   R - tamanho real do arquivo: 6 bytes
+   T - número total de bytes transferidos: 5771 bytes
+   S - sobrecarga %: 96083,3%

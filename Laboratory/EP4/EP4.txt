@@ -1,0 +1,10 @@
+EP4
+Unfortunately, if the last line's three-digit code is not followed by
+the optional space and text, then p (at line 1196) points to the first
+character *after* the line's '\0' terminator (which replaced the line's
+'\n' terminator in iobuf_getline()), and this out-of-bounds string is
+concatenated into replybuf (at line 1201).
+
+- Client-side: Servidor malicioso, (fake servidor), DNS hijack
+
+- Server-side: Cliente malicioso, 
