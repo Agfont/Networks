@@ -57,20 +57,20 @@ Implementation of an MQTT server with performance analysis. Includes:
 **Location:** `Laboratory/EP2/`
 
 A complete client-server game implementation with encryption and security. Includes:
-- `ep2-arthur-lucas` - Solution directory with `README.md`
-    - `main.py` - Main entry point
-    - `client/` - Client-side code
-        - `client.py` - Client implementation
-        - `game.py` - Game logic
-    - `server/` - Server-side code
-        - `server.py` - Server implementation
-        - `connection.py` - Connection management
-        - `user.py` - User management
-        - `reboot.py` - Server restart utilities
-        - `data/` - Data storage
-    - `perm/` - Cryptographic keys
-        - `sk.pem` - Private key
-        - `pk.pem` - Public key
+
+- `main.py` - Main entry point
+- `client/` - Client-side code
+    - `client.py` - Client implementation
+    - `game.py` - Game logic
+- `server/` - Server-side code
+    - `server.py` - Server implementation
+    - `connection.py` - Connection management
+    - `user.py` - User management
+    - `reboot.py` - Server restart utilities
+    - `data/` - Data storage
+- `perm/` - Cryptographic keys
+    - `sk.pem` - Private key
+    - `pk.pem` - Public key
 - `scripts/` - Testing and automation
   - `match.sh` - Game match runner
   - `player1`, `player2` - Player scripts

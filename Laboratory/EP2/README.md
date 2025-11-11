@@ -95,3 +95,28 @@ Uma vez inicializado o servidor, para verificar sua correta execução, foram ut
 Em cada máquina virtual, foi criado um cliente e na máquina host foi criado o servidor. Nisso foram estabelecidas as conexões e testados todos os comandos.
 
 O código também foi testado entre computadores da mesma rede, porém apenas com duas máquinas diferentes.
+
+## Quick Start
+
+### Setup
+Install dependencies in a virtual environment:
+```bash
+python3 -m venv .venv
+source "$(pwd)/.venv/bin/activate"
+python3 -m pip install pandas
+```
+
+### Run Server
+```bash
+python3 main.py 8000
+```
+
+### Run Client
+```bash
+python3 main.py localhost 8000
+```
+
+### Run Tests
+```bash
+./scripts/match.sh localhost 8080 a 10 b 20
+```

@@ -3,6 +3,7 @@ from client.game import MatchState
 from server.user import User
 import datetime
 import socket
+import pandas as pd
 
 MAXLINE = 4096
 BEATWAIT = 10
@@ -56,7 +57,9 @@ class ClientServerConnection:
                          'Password' : passwd,
                          'Score':   0}
                 with self.server.df_lock:
-                    self.server.df = self.server.df.append(entry, ignore_index=True)
+                    # pandas.DataFrame.append is deprecated in pandas v2; use concat instead
+                    self.server.df = pd.concat([self.server.df, pd.DataFrame([entry])], ignore_index=True)
+                    self.server.df.to_csv(DATABASE, index = False)
                     self.server.df.to_csv(DATABASE, index = False)
 
         elif command == "passwd":

@@ -1,3 +1,4 @@
 __pycache__/
-server.log
-*.csv
+# server.log
+# *.csv
+perm/

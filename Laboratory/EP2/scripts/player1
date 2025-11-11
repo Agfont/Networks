@@ -1,13 +1,13 @@
-#!/bin/expect
+#!/usr/bin/expect
 
-# ./login.sh <addr> <port>
 set addr [lindex $argv 0]
 set port [lindex $argv 1]
 set user [lindex $argv 2]
-set opon [lindex $argv 3]
-spawn ./main.py $addr $port
+set password [lindex $argv 3]
+set opon [lindex $argv 4]
+spawn python3 main.py $addr $port
 expect "JogoDaVelha>"
-send "login ${user} ${user}\n"
+send "login ${user} ${password}\n"
 expect "JogoDaVelha>"
 sleep 1
 send "begin ${opon}\n"
